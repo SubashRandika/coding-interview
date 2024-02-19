@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Product } from '../../models/product';
+import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
@@ -19,7 +18,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
 })
-export class ProductCardComponent {
+export class ProductCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
