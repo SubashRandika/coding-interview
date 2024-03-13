@@ -1,0 +1,9 @@
+@if(loading$ | async) {
+<div class="spinner-container">
+  @if(customLoadingTemplateRef) {
+  <ng-container *ngTemplateOutlet="customLoadingTemplateRef"></ng-container>
+  } @else {
+  <mat-spinner />
+  }
+</div>
+}

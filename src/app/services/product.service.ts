@@ -11,10 +11,8 @@ export class ProductService {
   private http: HttpClient = inject(HttpClient);
 
   getProducts() {
-    return this.http.get<ProductResponse>(`${this.basUrl}/products`).pipe(
-      map((res: ProductResponse) => {
-        return res.products as Product[];
-      })
-    );
+    return this.http
+      .get<ProductResponse>(`${this.basUrl}/products`)
+      .pipe(map((res: ProductResponse) => res.products as Product[]));
   }
 }

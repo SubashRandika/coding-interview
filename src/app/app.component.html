@@ -1,4 +1,12 @@
 <main class="main-container">
   <h1>Products List</h1>
-  <product-card />
+  <ng-container *ngIf="products$ | async as products">
+    @for(product of products; track product.id) {
+    <product-card [product]="product" />
+    } @empty {
+    <h2>Sorry, No Products available.</h2>
+    }
+  </ng-container>
+
+  <loading-indicator [detectRouteTransitions]="true" />
 </main>
